@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EDP Mouse Event</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        h4 {
+            text-align: center;
+            color: #071a2e;
+        }
+        .table-border {
+            width: 80%;
+            margin: 0 auto;
+            border-collapse: collapse;
+        }
+        .table-border th, .table-border td {
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+        .table-border th {
+            background-color: #0f263f;
+            color: white;
+        }
+        .table-border tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .table-border tr:hover {
+            background-color: #f1f1f1;
+        }
+        .bordered-span-2 {
+            text-align: center;
+        }
+        button {
+            background-color: #007bff;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 5px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        button:focus {
+            outline: none;
+        }
+        td {
+            vertical-align: middle;
+        }
+        .description {
+            padding: 0 10px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h4>Different Types of Mouse Event</h4>
+        <table class="table-border">
+            <tbody>
+                <tr>
+                    <td class="bordered-span-2">
+                        <button id="tweak">Click Me!</button>
+                    </td>
+                    <td>
+                        Fired when the user clicks an element
+                    </td>
+
+                </tr>
+                <tr>
+                    <td class="bordered-span-2">
+                        <button id="tweak1">Double Click Me!</button>
+                    </td>
+                    <td>
+                        Fired when the user double-clicks an element
+                    </td>
+                    
+                </tr>
+                <tr>
+                    <td class="bordered-span-2">
+                        <button id="tweak2">Move Down Event</button>
+                    </td>
+                    <td>
+                        Fired when the user presses the mouse button
+                    </td>                    
+                </tr>
+                <tr>
+                    <td class="bordered-span-2">
+                        <button id="tweak3">Move Up Event</button>
+                    </td>
+                    <td> 
+                        Fired when the user releases the button
+                    </td>
+                </tr>
+                <tr>
+                    <td class="bordered-span-2">
+                        <button id="tweak4">Mouse over</button>
+                    </td>
+                    <td> 
+                        Fired when the user moves the mouse over of an element
+                    </td>
+                </tr>
+                <tr>
+                    <td class="bordered-span-2">
+                        <button id="tweak5">Mouse out</button>
+                    </td>
+                    <td> 
+                        Fired when the user moves the mouse out of an element
+                    </td>
+                </tr>
+                <tr>
+                    <td class="bordered-span-2">
+                        <button id="tweak6">Mouse move</button>
+                    </td>
+                    <td> 
+                        Fired when the user moves the mouse over of an element
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        const button = document.getElementById('tweak');
+
+        button.addEventListener('click', () => {
+            alert('You clicked the button!');
+        })
+
+        const button1 = document.getElementById('tweak1');
+        button1.addEventListener('dblclick', () => {
+            alert('You double clicked the button!');
+        })
+
+        const button2 = document.getElementById('tweak2');
+        button2.addEventListener('mousedown', () => {
+            alert('Mouse down');
+        })
+        const button3 = document.getElementById('tweak3');
+        button3.addEventListener('mouseup', () => {
+            alert('Mouse up');
+        })
+        const button4 = document.getElementById('tweak4');
+        button4.addEventListener('mouseover', () => {
+            alert('Mouse over');
+        })
+        const button5 = document.getElementById('tweak5');
+        button5.addEventListener('mouseout', () => {
+            alert('Mouse out');
+        })
+        const button6 = document.getElementById('tweak6');
+        button6.addEventListener('mousemove', () => {
+            alert('Mouse move');
+        })
+    </script>
+    
+</body>
+</html>
+
